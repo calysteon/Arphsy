@@ -84,8 +84,8 @@ const results = findExtendedHexInRange(filePath, startHex, endHex);
 console.log("Matching instances:");
 console.log(results.map((result) => result.fullMatch));
 
-// Process only the hex values through a38A
-const processedResults = results.map((result) => a38A(result.hexValue));
+// Process only the hex values through PLACEHOLDER
+const processedResults = results.map((result) => PLACEHOLDER(result.hexValue));
 console.log("Processed results:");
 console.log(processedResults);
 
