@@ -1,5 +1,6 @@
-# deDarc
-This is the code repository for the "Sunlight for Darcula: Autonomous Variable Reassignment" pape
+# jEssence
+
+This is the code repository for the "Sunlight for Darcula: Autonomous Variable Reassignment" paper
 
 # Requirements
 
