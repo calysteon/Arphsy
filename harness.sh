@@ -83,12 +83,15 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
+# Copy sample to extracted
+cp "$SOURCE_FILE_JS" "$EXTRACTED_FILE_JS"
+
 # Resolving all variable names
 echo "Resolving all variable names"
-node $VERIFIED_FILE_JS "$SOURCE_FILE_JS"
+node $VERIFIED_FILE_JS "$EXTRACTED_FILE_JS"
 if [[ $? -ne 0 ]]; then
     echo "Error: verified.js script execution failed."
     exit 1
 fi
 
-echo "Processing completed successfully."
+echo "Processing completed successfully. Check sample/extracted.js"

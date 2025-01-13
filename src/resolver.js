@@ -23,16 +23,14 @@ function extractFunctionDefinitions(code) {
     return definitions;
 }
 
-// Function to find self-executing autonomous functions using specific parameters
-function findSelfExecutingFunctions(code, targetFunction) {
-    const regex = new RegExp(
-        `\\(\\s*function\\s*\\([^)]*\\)\\s*\\{[\\s\\S]*?\\b${targetFunction}\\b[\\s\\S]*?\\}\\s*\\([^)]*\\)\\s*;?`,
-        'g'
-    );
+function findAllSelfExecutingFunctions(code) {
+    // Regex to match self-executing functions (IIFEs)
+    const iifeRegex = /\(function((.|\n)*?)\}\)\([a-zA-Z0-9]*, 0x[a-zA-Z0-9]*\);/gs;
+
     const matches = [];
     let match;
 
-    while ((match = regex.exec(code)) !== null) {
+    while ((match = iifeRegex.exec(code)) !== null) {
         matches.push(match[0]);
     }
 
@@ -70,7 +68,7 @@ function resolveExternalFunctionsAndIIFEs(mainFilePath, lookupFilePath) {
 
         // Search for the function definition in the lookup file
         const functionRegex = new RegExp(
-            `\\bfunction\\s+${missingFunction}\\s*\\(.*?\\{[\\s\\S]*?\\}`,
+            `\\bfunction\\s+${missingFunction}\\s*\\(.*?\\{[\\s\\S]*?return ${missingFunction}\\(\\);`,
             'g'
         );
         const functionMatch = functionRegex.exec(lookupFileContent);
@@ -87,10 +85,12 @@ function resolveExternalFunctionsAndIIFEs(mainFilePath, lookupFilePath) {
         updatedContent = functionDefinition + '\n\n' + updatedContent;
 
         // Search for self-executing functions using the resolved function
-        const iifes = findSelfExecutingFunctions(lookupFileContent, missingFunction);
+        //TODO add the ability to specify which function via missingFunction
+        const iifes = findAllSelfExecutingFunctions(lookupFileContent);
         if (iifes.length > 0) {
-            console.log(`Found ${iifes.length} IIFE(s) using ${missingFunction}`);
-            updatedContent = iifes.join('\n\n') + '\n\n' + updatedContent;
+            console.log(`Found ${iifes.length} IIFE(s)`);
+            console.log(iifes);
+            updatedContent = iifes + '\n\n' + updatedContent;
         }
     }
 

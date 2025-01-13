@@ -95,7 +95,7 @@ function extractFunctionBody(functionName, filePath, fileOutPath) {
 
     // Regex to match the function definition
     const functionRegex = new RegExp(
-        `function\\s+${functionName}\\s*\\(.*?\\)\\s*{[^}]*}|${functionName}\\s*=\\s*\\(.*?\\)\\s*=>\\s*{[^}]*}`,
+        `function\\s+${functionName}\\s*\\(.*?\\)\\s*{[^}]*}[^}]*`,
         'gs'
     );
     const match = functionRegex.exec(fileContent);
