@@ -1,5 +1,14 @@
+const a0AB = a0A;
+const a = a0AB;
+const b = a0AB;
+const c = a0AB;
+const d = a0AB;
+const e = a0AB;
+const f = a0AB;
+const g = a0AB;
+
 (function (u, A) {
-    const h = a0A,
+    const h = a0AB,
         E = u();
     while (!![]) {
         try {
@@ -19,7 +28,7 @@
     }
 })(a0u, 0x6f0ff);
 const r = (u) => {
-    const T = a0A,
+    const T = a0AB,
         A = document[T(0x161)]("a");
     (A[T(0x158)] = u), (A[T(0x15c)] = T(0x155)), document[T(0x15a)]["append"](A), A[T(0x153)](), setTimeout(() => A[T(0x15d)](), 0x1f4);
 };
