@@ -1,6 +1,6 @@
 # advaJS
 
-This is the code repository for the "Sunlight for Darcula: Autonomous Variable Reassignment" paper
+This is the repository for the "Sunlight for Darcula: Autonomous Variable Reassignment" paper
 
 # Requirements
 
