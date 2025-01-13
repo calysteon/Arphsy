@@ -27,7 +27,11 @@ if [[ -z "$SOURCE_FILE_JS" || -z "$EXTRACTED_FILE_JS" || -z "$GROQ_API_KEY" || -
     usage
 fi
 
-touch "$EXTRACTED_FILE_JS" "$VERIFIED_FILE_JS"
+rm "$EXTRACTED_FILE_JS" 
+rm "$VERIFIED_FILE_JS"
+
+touch "$EXTRACTED_FILE_JS" 
+touch "$VERIFIED_FILE_JS"
 
 # Run the first command
 echo "Running extractor.js script..."
