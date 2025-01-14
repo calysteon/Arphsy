@@ -1,6 +1,6 @@
-# arfC
+# Arphsy
 
-This is the repository for the "Sunlight for Darcula: Autonomously Resolving Function Calls with ArfC" paper
+This is the repository for the "Sunlight for Darcula: Autonomously Resolving Function Calls with Arphsy" paper
 
 # Requirements
 
