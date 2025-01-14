@@ -1,6 +1,8 @@
 # Arphsy
 
-This is the repository for the upcoming "Sunlight for Darcula: Autonomously Resolving Function Calls with Arphsy" paper
+This is the repository for the upcoming "Sunlight for Darcula: Autonomously Resolving Function Calls with Arphsy" paper. 
+
+Once published, the upcoming paper will be linked here for brevity. 
 
 # Requirements
 
