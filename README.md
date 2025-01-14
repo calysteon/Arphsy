@@ -4,6 +4,10 @@ This is the repository for the upcoming "Sunlight for Darcula: Autonomously Reso
 
 Once published, the upcoming paper will be linked here for brevity. 
 
+# Acknowledgements
+
+We would like to thank both Angelica Reeser and Victor Haugen for their contributions to our research. 
+
 # Requirements
 
 ## Python
