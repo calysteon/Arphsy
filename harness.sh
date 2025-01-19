@@ -58,13 +58,6 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
-echo "Running Python verifier script..."
-python3 src/verifier.py "$EXTRACTED_FILE_JS" "$GROQ_API_KEY" "$VERIFIED_FILE_JS"
-if [[ $? -ne 0 ]]; then
-    echo "Error: Python verifier script execution failed."
-    exit 1
-fi
-
 # Renaming the exported function
 echo "Running Python renaming script..."
 python3 src/rename.py "$VERIFIED_FILE_JS" "PLACEHOLDER"
