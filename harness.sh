@@ -6,7 +6,6 @@ usage() {
     echo ""
     echo "  -s SOURCE_FILE_JS      Path to the source JavaScript file"
     echo "  -e EXTRACTED_FILE_JS   Path to the extracted JavaScript file"
-    echo "  -k GROQ_API_KEY        Groq API key"
     echo "  -v VERIFIED_FILE_JS    Path to the verified JavaScript file"
     exit 1
 }
@@ -16,14 +15,13 @@ while getopts "s:e:k:v:" opt; do
     case $opt in
         s) SOURCE_FILE_JS=$OPTARG ;;
         e) EXTRACTED_FILE_JS=$OPTARG ;;
-        k) GROQ_API_KEY=$OPTARG ;;
         v) VERIFIED_FILE_JS=$OPTARG ;;
         *) usage ;;
     esac
 done
 
 # Ensure all required arguments are provided
-if [[ -z "$SOURCE_FILE_JS" || -z "$EXTRACTED_FILE_JS" || -z "$GROQ_API_KEY" || -z "$VERIFIED_FILE_JS" ]]; then
+if [[ -z "$SOURCE_FILE_JS" || -z "$EXTRACTED_FILE_JS" || -z "$VERIFIED_FILE_JS" ]]; then
     usage
 fi
 

@@ -22,17 +22,15 @@ npm install escodegen
 
 # Usage
 
-Note: Replace `GROQ_API_KEY` with your API key for Groq.
-
 ```sh
 # Run Arphsy against a sample with 63 lines of obfuscated JavaScript
-bash harness.sh -e "./sample/extracted.js" -k "GROQ_API_KEY" -v "./sample/verified.js" -s "./sample/63.js"
+bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/63.js"
 
 # Run Arphsy against a sample with 110 lines of obfuscated JavaScript
-bash harness.sh -e "./sample/extracted.js" -k "GROQ_API_KEY" -v "./sample/verified.js" -s "./sample/110.js"
+bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/110.js"
 
 # Run Arphsy against a sample with 338 lines of obfuscated JavaScript
-bash harness.sh -e "./sample/extracted.js" -k "GROQ_API_KEY" -v "./sample/verified.js" -s "./sample/338.js"
+bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/338.js"
 ```
 
 # Acknowledgements
