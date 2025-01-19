@@ -36,21 +36,21 @@ touch "$VERIFIED_FILE_JS"
 #=========================================#
 
 echo "Running iife.js script..."
-node src/js/iife.js "$SOURCE_FILE_JS" "$EXTRACTED_FILE_JS"
+node src/js/iife.js "$SOURCE_FILE_JS" "$VERIFIED_FILE_JS"
 if [[ $? -ne 0 ]]; then
     echo "Error: iife.js script execution failed."
     exit 1
 fi
 
 echo "Running filter.js script..."
-node src/js/filter.js "$SOURCE_FILE_JS" "$EXTRACTED_FILE_JS"
+node src/js/filter.js "$SOURCE_FILE_JS" "$VERIFIED_FILE_JS"
 if [[ $? -ne 0 ]]; then
     echo "Error: filter.js script execution failed."
     exit 1
 fi
 
 echo "Running mrv.js script..."
-node src/js/mrv.js "$SOURCE_FILE_JS" "$EXTRACTED_FILE_JS"
+node src/js/mrv.js "$SOURCE_FILE_JS" "$VERIFIED_FILE_JS"
 if [[ $? -ne 0 ]]; then
     echo "Error: mrv.js script execution failed."
     exit 1
