@@ -7,7 +7,7 @@
 ## Python
 
 ```
-pip install groq, sys, os
+pip install sys, os
 ```
 
 ## JavaScript
