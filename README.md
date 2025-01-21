@@ -35,3 +35,7 @@ bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sampl
 # Run Arphsy against a sample with 409 lines of obfuscated JavaScript
 bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/409.js"
 ```
+
+# Acknowledgements
+
+We would like to thank both Angelica Reeser and Victor Haugen for their contributions to our research. 
