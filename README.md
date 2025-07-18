@@ -1,9 +1,5 @@
 # Arphsy
 
-![Array Canary](https://github.com/user-attachments/assets/82baae8a-9a5c-4d31-81bc-6aa313a2f407)
-
-# Demo
-
 ![Arphsy](https://github.com/user-attachments/assets/1b258de8-1cb4-42ef-9d38-64db53f67aca)
 
 # Requirements
