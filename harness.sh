@@ -60,7 +60,7 @@ fi
 echo "Running Python renaming script..."
 python3 src/rename.py "$VERIFIED_FILE_JS" "PLACEHOLDER"
 if [[ $? -ne 0 ]]; then
-    echo "Error: Python verifier script execution failed."
+    echo "Error: Python rename script execution failed."
     exit 1
 fi
 
@@ -68,7 +68,7 @@ fi
 echo "Running Python hex value script..."
 python3 src/counter.py "$VERIFIED_FILE_JS"
 if [[ $? -ne 0 ]]; then
-    echo "Error: Python verifier script execution failed."
+    echo "Error: Python counter script execution failed."
     exit 1
 fi
 
@@ -76,7 +76,7 @@ fi
 echo "Running Python integrator script..."
 python3 src/integrator.py "$VERIFIED_FILE_JS"
 if [[ $? -ne 0 ]]; then
-    echo "Error: Python verifier script execution failed."
+    echo "Error: Python integrator script execution failed."
     exit 1
 fi
 
@@ -94,4 +94,15 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
-echo "Processing completed successfully. Check sample/extracted.js"
+# Cleaning extracted.js
+echo "Cleaning extracted.js"
+node src/js/clean.js $EXTRACTED_FILE_JS $VERIFIED_FILE_JS
+if [[ $? -ne 0 ]]; then
+    echo "Error: clean.js script execution failed."
+    exit 1
+fi
+
+rm $EXTRACTED_FILE_JS
+rm $VERIFIED_FILE_JS
+
+echo "Processing completed successfully."

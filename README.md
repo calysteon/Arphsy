@@ -18,20 +18,21 @@ npm install acorn
 npm install path
 npm install estraverse
 npm install escodegen
+npm install @babel/parser @babel/traverse @babel/generator @babel/types
 ```
 
 # Usage
 
 ```sh
 # Run Arphsy against a sample with 63 lines of obfuscated JavaScript
-bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/63.js"
+bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.mjs" -s "./sample/63.js"
 
 # Run Arphsy against a sample with 110 lines of obfuscated JavaScript
-bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/110.js"
+bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.mjs" -s "./sample/110.js"
 
 # Run Arphsy against a sample with 338 lines of obfuscated JavaScript
-bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/338.js"
+bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.mjs" -s "./sample/338.js"
 
 # Run Arphsy against a sample with 409 lines of obfuscated JavaScript
-bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.js" -s "./sample/409.js"
+bash harness.sh -e "./sample/extracted.js" -v "./sample/verified.mjs" -s "./sample/409.js"
 ```
