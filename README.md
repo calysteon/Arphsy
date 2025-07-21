@@ -13,12 +13,7 @@ pip install sys, os
 ## JavaScript
 
 ```
-npm install fs
-npm install acorn
-npm install path
-npm install estraverse
-npm install escodegen
-npm install @babel/parser @babel/traverse @babel/generator @babel/types
+npm install fs acorn path estraverse escodegen @babel/parser @babel/traverse @babel/generator @babel/types
 ```
 
 # Usage
