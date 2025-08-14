@@ -2,6 +2,10 @@
 
 ![Arphsy](https://github.com/user-attachments/assets/1b258de8-1cb4-42ef-9d38-64db53f67aca)
 
+# Paper
+
+![Paper](https://arxiv.org/html/2501.13256v1)
+
 # Requirements
 
 ## Python
