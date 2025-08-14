@@ -4,7 +4,7 @@
 
 # Paper
 
-![Paper](https://arxiv.org/html/2501.13256v1)
+https://arxiv.org/html/2501.13256v1
 
 # Requirements
 
